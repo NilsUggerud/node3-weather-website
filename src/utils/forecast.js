@@ -9,7 +9,8 @@ const forecast = (lat,lng, callback)=>{
         } else if(body.error){
             callback("Seems to be an error!", undefined);
         } else {
-            let message = "It is " + body.current.weather_descriptions[0] + ". "  + body.current.temperature + " degrees"
+            console.log(body)
+            let message = "It is " + body.current.weather_descriptions[0] + ". "  + body.current.temperature + " degrees. Current wind speed is " + body.current.wind_speed + " m/s";
             callback(undefined, message);
         }
     })
