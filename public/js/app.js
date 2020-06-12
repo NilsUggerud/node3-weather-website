@@ -19,7 +19,6 @@ function getForecast(url){
         response.json().then((data)=>{
             if (data.err){
                messageTwo.textContent = data.err;
-                
             } else {
                 messageOne.textContent = data.address;
                 messageTwo.textContent = data.forecast;
