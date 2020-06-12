@@ -8,7 +8,8 @@ const search = document.querySelector('input');
 weatherForm.addEventListener('submit', (event)=>{
     event.preventDefault();
     const location = search.value;
-    const url = "http://localhost:3000/weather?address=" + location;
+    const url = "/weather?address=" + location;
+
     messageTwo.textContent = 'Loading data...';
     messageOne.textContent = '';
     getForecast(url);
